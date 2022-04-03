@@ -164,4 +164,9 @@ We provide an heatmap highlighting which signs are wrongly classified and what's
 
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/heatmap.png?raw=true)
 
+Some of the highest value outside of the diagonal are class 41 classified as class 9 for 1/3 of the observations, class 0 classified as class 4 for 1/3 of the observations and class 27 classified as class 18 on 30% of the test set.
 
+Class 41:
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00000_00027.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00001_00029.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00002_00019.jpg?raw=true)
