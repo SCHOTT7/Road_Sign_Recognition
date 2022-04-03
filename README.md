@@ -171,9 +171,9 @@ Class 41:
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00001_00029.jpg?raw=true)
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00002_00019.jpg?raw=true)
 Class 9: 
-![img_example]https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00001_00029.jpg?raw=true)
-![img_example]https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00004_00029.jpg?raw=true)
-![img_example]https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00002_00020.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00001_00029.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00004_00029.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00002_00020.jpg?raw=true)
 
 
 
