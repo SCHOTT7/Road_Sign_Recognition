@@ -7,6 +7,7 @@ We used a dataset from Kaggle available at this link : *https://www.kaggle.com/d
 In this dataset we find a total of 27 000 train images and 12 630 test images. Images are cropped and converted to .jpg format.
 
 There is a total of 43 classes, which means that we have 43 different traffic signs: 
+
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00000_00002.jpg?raw=true)
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00000_00008.jpg?raw=true)
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00000_00018.jpg?raw=true)
@@ -50,3 +51,44 @@ There is a total of 43 classes, which means that we have 43 different traffic si
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00010_00024.jpg?raw=true)
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00010_00025.jpg?raw=true)
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00024_00028.jpg?raw=true)
+
+
+## The implementation 
+
+To speed up the training process and allow the use of GPU, we ran this project of Google Collab. 
+
+We used Pytorch to design our model and our datasets class
+
+We tried different model trying different number of hidden layers, different hidden layers's width and different convolution net. 
+
+The following results were obtain with 20 fully connected hidden layers of size 150. We added as activation, the Tahn function at each node, and used the dropout feature with a value of 0.5 
+Here's the detail of the convulotion network, that process our data before entering the neural net :
+
+```{python}
+self.c1 = nn.Sequential(
+    nn.Conv2d(3, 5, kernel_size=2, stride=1, padding=1),
+    nn.BatchNorm2d(5),
+    nn.ReLU(),
+    nn.AvgPool2d(kernel_size=2, stride=1, padding = 1) 
+)
+
+
+self.c3 = nn.Sequential(
+    nn.Conv2d(5, 10, kernel_size=3, stride = 2, padding = 1),
+    nn.BatchNorm2d(10),
+    nn.ReLU(),
+    nn.MaxPool2d(kernel_size=2, stride=2)
+)
+
+self.c5 = nn.Sequential(
+    nn.Conv2d(10, 28, kernel_size=2),
+    nn.BatchNorm2d(28),
+    nn.ReLU()
+)
+self.c7 = nn.Sequential(
+    nn.Conv2d(4, 7, kernel_size = 3, stride = 2, padding = 1),
+    nn.BatchNorm2d(7),
+    nn.ReLU(),
+    nn.MaxPool2d(kernel_size = 2, stride = 1)
+)
+```
