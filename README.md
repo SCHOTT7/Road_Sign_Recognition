@@ -8,4 +8,4 @@ In this dataset we find a total of 27 000 train images and 12 630 test images. I
 
 There is a total of 43 classes, which means that we have 43 different traffic signs: 
 
-![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition]/blob/Signs_Examples/00000_00028.jpg.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition]/Signs_Examples/00000_00028.jpg.jpg?raw=true)
