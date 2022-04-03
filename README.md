@@ -1,6 +1,6 @@
 # Traffic Sign Recognition
 
-## The DataSet
+## DataSet
 
 We used a dataset from Kaggle available at this link : *https://www.kaggle.com/datasets/shanmukh05/traffic-sign-cropped*
 
@@ -53,7 +53,7 @@ There is a total of 43 classes, which means that we have 43 different traffic si
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/00024_00028.jpg?raw=true)
 
 
-## The implementation 
+## Implementation 
 
 To speed up the training process and allow the use of GPU, we ran this project of Google Collab. 
 
@@ -105,3 +105,63 @@ SignClassification(
   )
 )
 ```
+
+We used Cross entropy as Criterion and the Adam optimizer for faster and accurate training.
+
+## Results
+
+
+```{python}
+Epoch [1/8], Step [1/205], Loss: 3.7597
+Epoch [1/8], Step [50/205], Loss: 3.0578
+Epoch [1/8], Step [99/205], Loss: 1.9029
+Epoch [1/8], Step [148/205], Loss: 1.9718
+Epoch [1/8], Step [197/205], Loss: 1.2675
+Epoch [2/8], Step [1/205], Loss: 1.2280
+Epoch [2/8], Step [50/205], Loss: 0.9330
+Epoch [2/8], Step [99/205], Loss: 0.9221
+Epoch [2/8], Step [148/205], Loss: 0.6355
+Epoch [2/8], Step [197/205], Loss: 0.5433
+Epoch [3/8], Step [1/205], Loss: 0.3476
+Epoch [3/8], Step [50/205], Loss: 0.3307
+Epoch [3/8], Step [99/205], Loss: 0.2422
+Epoch [3/8], Step [148/205], Loss: 0.2220
+Epoch [3/8], Step [197/205], Loss: 0.2694
+Epoch [4/8], Step [1/205], Loss: 0.1245
+Epoch [4/8], Step [50/205], Loss: 0.1606
+Epoch [4/8], Step [99/205], Loss: 0.1115
+Epoch [4/8], Step [148/205], Loss: 0.1777
+Epoch [4/8], Step [197/205], Loss: 0.2607
+Epoch [5/8], Step [1/205], Loss: 0.2845
+Epoch [5/8], Step [50/205], Loss: 0.1755
+Epoch [5/8], Step [99/205], Loss: 0.1066
+Epoch [5/8], Step [148/205], Loss: 0.1257
+Epoch [5/8], Step [197/205], Loss: 0.1497
+Epoch [6/8], Step [1/205], Loss: 0.1188
+Epoch [6/8], Step [50/205], Loss: 0.0705
+Epoch [6/8], Step [99/205], Loss: 0.0656
+Epoch [6/8], Step [148/205], Loss: 0.0850
+Epoch [6/8], Step [197/205], Loss: 0.0337
+Epoch [7/8], Step [1/205], Loss: 0.0345
+Epoch [7/8], Step [50/205], Loss: 0.0622
+Epoch [7/8], Step [99/205], Loss: 0.0201
+Epoch [7/8], Step [148/205], Loss: 0.0400
+Epoch [7/8], Step [197/205], Loss: 0.0467
+Epoch [8/8], Step [1/205], Loss: 0.0356
+Epoch [8/8], Step [50/205], Loss: 0.0281
+Epoch [8/8], Step [99/205], Loss: 0.0203
+Epoch [8/8], Step [148/205], Loss: 0.0169
+Epoch [8/8], Step [197/205], Loss: 0.0114
+Finished Training
+Accuracy of the network on the 12630 test images: 89 %
+```
+
+We found a pretty high accuracy of our model on the test set
+
+Then we tried to figure out, wich signs were wrongly classified:
+
+We provide an heatmap highlighting which signs are wrongly classified and what's the predicted class for these
+
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/heatmap.png?raw=true)
+
+
