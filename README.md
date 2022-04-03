@@ -168,7 +168,7 @@ Some of the highest value outside of the diagonal are class 41 classified as cla
 
 Class 41:
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00000_00027.jpg?raw=true)
-![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00001_00029.jpg?raw=true)
+![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00003_00002.jpg?raw=true)
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00002_00019.jpg?raw=true)
 Classified as class 9: 
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/00001_00029.jpg?raw=true)
