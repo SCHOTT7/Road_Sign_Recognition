@@ -62,33 +62,46 @@ We used Pytorch to design our model and our datasets class
 We tried different model trying different number of hidden layers, different hidden layers's width and different convolution net. 
 
 The following results were obtain with 20 fully connected hidden layers of size 150. We added as activation, the Tahn function at each node, and used the dropout feature with a value of 0.5 
-Here's the detail of the convulotion network, that process our data before entering the neural net :
+Here's the detail of the convolotion net and the neural net:
 
 ```{python}
-self.c1 = nn.Sequential(
-    nn.Conv2d(3, 5, kernel_size=2, stride=1, padding=1),
-    nn.BatchNorm2d(5),
-    nn.ReLU(),
-    nn.AvgPool2d(kernel_size=2, stride=1, padding = 1) 
-)
-
-
-self.c3 = nn.Sequential(
-    nn.Conv2d(5, 10, kernel_size=3, stride = 2, padding = 1),
-    nn.BatchNorm2d(10),
-    nn.ReLU(),
-    nn.MaxPool2d(kernel_size=2, stride=2)
-)
-
-self.c5 = nn.Sequential(
-    nn.Conv2d(10, 28, kernel_size=2),
-    nn.BatchNorm2d(28),
-    nn.ReLU()
-)
-self.c7 = nn.Sequential(
-    nn.Conv2d(4, 7, kernel_size = 3, stride = 2, padding = 1),
-    nn.BatchNorm2d(7),
-    nn.ReLU(),
-    nn.MaxPool2d(kernel_size = 2, stride = 1)
+SignClassification(
+  (c1): Sequential(
+    (0): Conv2d(3, 5, kernel_size=(2, 2), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(5, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): AvgPool2d(kernel_size=2, stride=1, padding=1)
+  )
+  (c3): Sequential(
+    (0): Conv2d(5, 10, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (1): BatchNorm2d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (c5): Sequential(
+    (0): Conv2d(10, 28, kernel_size=(2, 2), stride=(1, 1))
+    (1): BatchNorm2d(28, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+  )
+  (c7): Sequential(
+    (0): Conv2d(4, 7, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (1): BatchNorm2d(7, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=2, stride=1, padding=0, dilation=1, ceil_mode=False)
+  )
+  (layers): Sequential(
+    (0): Linear(in_features=1372, out_features=60, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=60, out_features=60, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=60, out_features=60, bias=True)
+    (5): ReLU()
+    (6): Linear(in_features=60, out_features=60, bias=True)
+    (7): ReLU()
+    (8): Dropout(p=0.3, inplace=False)
+    (9): Linear(in_features=60, out_features=60, bias=True)
+    (10): ReLU()
+    (11): Linear(in_features=60, out_features=43, bias=True)
+  )
 )
 ```
