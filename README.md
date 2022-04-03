@@ -61,7 +61,7 @@ We used Pytorch to design our model and our datasets class
 
 We tried different model trying different number of hidden layers, different hidden layers's width and different convolution net. 
 
-The following results were obtain with 20 fully connected hidden layers of size 150. We added as activation, the Tahn function at each node, and used the dropout feature with a value of 0.5 
+The following results were obtain with 20 fully connected hidden layers of size 150. We added as activation, the Tahn function at each node, and used the dropout feature with a value of 0.25
 Here's the detail of the convolotion net and the neural net:
 
 ```{python}
@@ -108,7 +108,8 @@ SignClassification(
 
 We used Cross entropy as Criterion and the Adam optimizer for faster and accurate training.
 
-## Results
+
+## Results on test set
 
 
 ```{python}
@@ -197,3 +198,4 @@ Classified as class 18:
 ![img_example](https://github.com/SCHOTT7/Road_Sign_Recognition/blob/main/Signs_Classes/Missclassfication/class4-27-18/00008_00017.jpg?raw=true)
 
 
+These informations about missclassification could be use to add new layers to the convolution net to increase the model accuracy.
